@@ -27,5 +27,5 @@ list_ver=get_version(URL)
 for ver in list_ver:
 	list_link=get_link(URL,ver)
 	for link in list_link :
-		Folder_ver='2tb'+FOLDER+'/'+ver+'/'
+		Folder_ver='2tb:'+FOLDER+'/'+ver+'/'
 		subprocess.run(["rclone","copyurl",link,Folder_ver,"-a",'--progress'])
